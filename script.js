@@ -12,6 +12,14 @@ function render() {
   for (const task of tasks) {
     const item = document.createElement("li");
     item.textContent = task.text;
+    if (task.done) item.classList.add("done");
+
+    // Clicking a task marks it as done (or not done again)
+    item.addEventListener("click", () => {
+      task.done = !task.done;
+      render();
+    });
+
     list.appendChild(item);
   }
 }
