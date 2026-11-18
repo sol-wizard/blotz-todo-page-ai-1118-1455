@@ -19,3 +19,31 @@ body {
   width: 100%;
   padding: 0;
 }
+
+#add-button {
+  padding: 10px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#add-button:hover {
+  background-color: #4338ca;
+}
+
+#task-list li {
+  list-style: none;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#task-list li.done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
