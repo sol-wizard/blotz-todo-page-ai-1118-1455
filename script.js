@@ -32,3 +32,12 @@ addButton.addEventListener("click", () => {
   input.value = "";
   render();
 });
+
+// Clear all done tasks: keep only the tasks that are not done
+const clearDoneButton = document.getElementById("clear-done-button");
+clearDoneButton.addEventListener("click", () => {
+  const remaining = tasks.filter((task) => !task.done);
+  tasks.length = 0;
+  tasks.push(...remaining);
+  render();
+});
